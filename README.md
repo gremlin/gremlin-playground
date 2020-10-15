@@ -15,7 +15,7 @@ This project uses [Packer](https://www.packer.io/) and [VirtualBox](https://www.
 
 ### Mac
 
-The easiest way to install both tools on a mac is to use [Homebrew][https://brew.sh/] and run the commands:
+The easiest way to install both tools on a mac is to use [Homebrew](https://brew.sh/) and run the commands:
 ```bash
 # Install Packer.
 brew install packer
