@@ -3,3 +3,8 @@
 
 # Don't save the cache!
 packer_cache
+
+# Don't save the output in Git!
+GremlinPlayground-disk001.vmdk
+GremlinPlayground.ovf
+gremlin_playground.tar.gz

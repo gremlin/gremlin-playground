@@ -27,10 +27,17 @@
       "shutdown_command": "sudo -S shutdown -P now"
     }
   ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "sudo bash '{{.Path}}'",
+      "script": "scripts/install_gremlin.sh"
+    }
+  ],
   "post-processors": [
     {
       "type": "compress",
-      "format": "tar.gz"
+      "output": "gremlin_playground.tar.gz"
     }
   ]
 }
