@@ -44,4 +44,11 @@ packer validate playground.json
 packer build playground.json
 ```
 
+When complete, packer will create a `gremlin_playground.tar.gz` file that is ready for distribution.
 
+## Todo
+
+- We probably need versioning on the VM images. This can likely be accomplished by creating a `CHANGELOG.md` file in the root directory and just copying it into the VM.
+- We need to add a simple web app to demonstrate network attacks.
+- It's currently not possible to cut & paste into the VM. This makes entering the team ID and secret user unfriendly. There is no paste buffer/clipboard in the Centos 8 minimal shell (so this cannot be solved with the VirtualBox guest tools), so we'll likely need to enable ssh and have users ssh into the VM.
+- Add support to build cloud AMIs.
