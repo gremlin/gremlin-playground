@@ -29,9 +29,24 @@
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "scripts/motd.txt",
+      "destination": "/tmp/motd"
+    },
+    {
+      "type": "file",
+      "source": "scripts/gremlin-playground.sh",
+      "destination": "/tmp/gremlin-playground"
+    },
+    {
       "type": "shell",
       "execute_command": "sudo bash '{{.Path}}'",
-      "script": "scripts/install_gremlin.sh"
+      "script": "scripts/gremlin.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "sudo bash '{{.Path}}'",
+      "script": "scripts/cleanup.sh"
     }
   ],
   "post-processors": [

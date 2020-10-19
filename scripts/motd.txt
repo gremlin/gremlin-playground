@@ -1,0 +1,23 @@
+
+     mhs:`                             ``                             `/shm
+     :N::oso/-`              `:+oooooo++++oooooo+-`              `-/oso::N:
+      /Mh:  ./ooooooo+:`  `/so:`  .+syo. -yyo`  `:os/`  `:+ooooooo/.  :hM/ 
+       /MMNy+.       `-syoy-      -+so+:/+.`        :yoyo-`       -+yNMM/  
+        +MMMMMNds/.     .:             `/:            /.     -+sdMMMMMM+   
+         hMMMMMMMMMNy/                                   `+hNMMMMMMMMMy    
+         -MMMMMMMMMMMMm:                                /NMMMMMMMMMNdo`    
+          dNMMMMMMMMMMMM`:ys+-                    `/syo`NMMMMMMMMMMMm+     
+           +dMMMMMMMMMMM-..+ydmy/.            `:sdmhs`.`MMMMMMMMMMMMM/     
+           hMMMMMMMMMMMN   +MMMMMMNh+-    ./smMMMMMMd   dMMMMMMMMh+//      
+            oMMMdMMMMMMo    /dNMMNy/-      -:smMMMms`   /MMMMMMMMMN-       
+             .: sMMMMMN`  .     `.//        //.      ``  mMMshhNdo`        
+                `-://h+  :y/-````.-:://:://::-..```.:oy  +h/-              
+                     d-   +/syo/hy:``sy` os-`.hss:dy/o.  -d                
+                     os    `/+hy` s.s`.s-+ o:o- /hy/-    so                
+                      +y/`     .:/+s/::sy:::so/:-`    `:y+                 
+                        :oso+:.`                `.:+oso:                   
+                            `-/+oy-          -yo+/-`                       
+                                 `soooooooooos`  
+
+       To finish installing Gremlin, run the command: gremlin-playground
+
