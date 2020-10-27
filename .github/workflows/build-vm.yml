@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Install VirtualBox
-        run: wget -q -O virtualbox.deb https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~bionic_amd64.deb \
+        run: wget -q -O virtualbox.deb https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~bionic_amd64.deb && \
           apt-get install -y ./virtualbox.deb
 
       - name: Checkout Repository
