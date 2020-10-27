@@ -21,7 +21,9 @@
       "vboxmanage": [
         ["modifyvm", "{{.Name}}", "--audio", "none"],
         ["modifyvm", "{{.Name}}", "--memory", "1024"],
-        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+        ["modifyvm", "{{.Name}}", "--cpus", "1"],
+        ["modifyvm", "{{.Name}}", "--natpf1", "ssh,tcp,,2222,,22"],
+        ["modifyvm", "{{.Name}}", "--natpf1", "http,tcp,,8000,,80"]
       ],
       "disk_size": "10000",
       "shutdown_command": "sudo -S shutdown -P now"
