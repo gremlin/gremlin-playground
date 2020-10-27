@@ -5,14 +5,11 @@ on: [push]
 jobs:
   build-image:
     runs-on: ubuntu-18.04
-    name: packer
+    name: Build VM Image
 
     steps:
       - name: Install VirtualBox
-        run: sudo echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bionic contrib" >> /etc/apt/sources.list && \
-          wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - && \
-          sudo apt-get update && \
-          sudo apt-get install virtualbox-6.1
+        run: wget -q https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~bionic_amd64.deb | sudo apt-get install -
 
       - name: Checkout Repository
         uses: actions/checkout@v2
