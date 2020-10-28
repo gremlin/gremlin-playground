@@ -4,6 +4,8 @@
       "type": "virtualbox-iso",
       "vm_name": "GremlinPlayground",
       "headless": true,
+      "guest_additions_mode": "disable",
+      "virtualbox_version_file": "",
 
       "guest_os_type": "RedHat_64",
       "iso_url": "http://mirror.web-ster.com/centos/8.2.2004/isos/x86_64/CentOS-8.2.2004-x86_64-minimal.iso",
