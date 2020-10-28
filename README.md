@@ -1,13 +1,47 @@
 # Gremlin Playground
 
-This repo will help you build a minimal Linux virtual machine image that will allow anyone to easily play with Gremlin.
+This repo provides the Gremlin Playground virtual machine binaries and also contains the files necessary to create the virtual machine binaries.
 
-The project currently supports:
+## Using the Gremlin Playground
 
-- VirtualBox: Generates a .tar.gz file that contains a VirtualBox OVF (machine config file) and VMDK (disk image)
-- AWS AMI: not yet supported
-- Azure AMI: not yet supported
-- GCP AMI: not yet supported
+### VirtualBox
+
+To run the Gremlin Playground on [VirtualBox](https://www.virtualbox.org/):
+
+1. Download the latest release from the [Releases page](https://github.com/gremlin/gremlin-playground/releases).
+1. Extract the virtual machine files.
+   MacOS: Double-click the Gremlin Playground .tar.gz file.
+   Linux: Use the tar command. e.g. `tar xzf gremlin_playground.tar.gz`
+   Windows: Use a tool such as [7-zip](https://www.7-zip.org/).
+1. In VirtualBox, select "Import Appliance" from the "File" menu.
+1. In the "Source" panel, choose "Local File System" and select the `GremlinPlayground.ovf` file you extracted in the previous steps. Then, click "Import".
+1. After the Gremlin Playground VM has been imported, click the "Start" button.
+
+### Logging in
+
+To log in, use the credentials:
+- username: `gremlin`
+- password: `gremlin`
+
+The `gremlin` user has been added to the `sudoers` file and there is no password required to run `sudo`.
+
+Note that logging in directly to the VM using VirtualBox does *not* support copy & paste from the host computer. This can make entering commands and credentials more difficult. You can SSH to the VM and port forwarding has been pre-configured on port 2222.
+
+```bash
+ssh -p 2222 gremlin@localhost
+```
+
+### Initializing Gremlin
+
+The Gremlin client has been pre-installed on the VM, however you need to provide your credentials to associate it to your Gremlin account. If you do not have a Gremlin account, you can create one free at [https://gremlin.com/free](https://gremlin.com/free).
+
+After you log into the VM, run the command `gremlin-playground` and follow the instructions to authenticate the Gremlin client. For more information, see the [authentication documentation](https://www.gremlin.com/docs/infrastructure-layer/authentication/).
+
+Once your VM has been authenticated, it will appear in the [clients page](https://app.gremlin.com/clients/hosts) in your Gremlin account.
+
+
+---
+# Development information
 
 ## Requirements
 
@@ -20,7 +54,7 @@ The easiest way to install both tools on a mac is to use [Homebrew](https://brew
 # Install Packer.
 brew install packer
 
-# Install VirtualBox
+# Install VirtualBox.
 brew cask install virtualbox
 ```
 
@@ -46,9 +80,14 @@ packer build playground.json
 
 When complete, packer will create a `gremlin_playground.tar.gz` file that is ready for distribution.
 
+## Creating releases
+
+## Troubleshooting
+
 ## Todo
 
-- We probably need versioning on the VM images. This can likely be accomplished by creating a `CHANGELOG.md` file in the root directory and just copying it into the VM.
-- We need to add a simple web app to demonstrate network attacks.
-- It's currently not possible to cut & paste into the VM. This makes entering the team ID and secret user unfriendly. There is no paste buffer/clipboard in the Centos 8 minimal shell (so this cannot be solved with the VirtualBox guest tools), so we'll likely need to enable ssh and have users ssh into the VM.
-- Add support to build cloud AMIs.
+- Complete the "Creating releases" documentation
+- Add development tips to the "Troubleshooting" section.
+- Add support to build an AWS AMI
+- Add support to build an Azure AMI
+- Add support to build a GCP AMI
