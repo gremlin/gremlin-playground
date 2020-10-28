@@ -10,9 +10,9 @@ To run the Gremlin Playground on [VirtualBox](https://www.virtualbox.org/):
 
 1. Download the latest release from the [Releases page](https://github.com/gremlin/gremlin-playground/releases).
 1. Extract the virtual machine files.
-   MacOS: Double-click the Gremlin Playground .tar.gz file.
-   Linux: Use the tar command. e.g. `tar xzf gremlin_playground.tar.gz`
-   Windows: Use a tool such as [7-zip](https://www.7-zip.org/).
+   - MacOS: Double-click the Gremlin Playground .tar.gz file.
+   - Linux: Use the tar command. e.g. `tar xzf gremlin_playground.tar.gz`
+   - Windows: Use a tool such as [7-zip](https://www.7-zip.org/).
 1. In VirtualBox, select "Import Appliance" from the "File" menu.
 1. In the "Source" panel, choose "Local File System" and select the `GremlinPlayground.ovf` file you extracted in the previous steps. Then, click "Import".
 1. After the Gremlin Playground VM has been imported, click the "Start" button.
