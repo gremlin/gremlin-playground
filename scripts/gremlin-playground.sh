@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if [[ "$(systemctl is-active gremlind)" = "active" ]]; then
-  echo "Gremlin is already running. To update the Gremlin client authentication, see the documentation at https://www.gremlin.com/docs/infrastructure-layer/authentication/"
-  exit
-fi
-
 # Get the credentials
 echo "Let's get this virtual machine registered with Gremlin!
 
@@ -29,7 +24,9 @@ For more information, see the documentation at:
 https://www.gremlin.com/docs/infrastructure-layer/authentication/
 "
 
+# Export credentials as env vars
 export GREMLIN_TEAM_ID=$TEAMID
 export GREMLIN_TEAM_SECRET=$TEAMSECRET
 
+# Initialize Gremlin
 gremlin init --tag service="gremlin-playground"

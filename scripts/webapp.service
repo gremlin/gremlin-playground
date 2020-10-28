@@ -1,0 +1,11 @@
+[Unit]
+Description=Gremlin Playground example webapp service
+After=multi-user.target
+Requires=redis.service
+
+[Service]
+Type=simple
+ExecStart=/bin/python3 /home/gremlin/webapp/app.py
+
+[Install]
+WantedBy=multi-user.target

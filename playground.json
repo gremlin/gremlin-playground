@@ -41,14 +41,19 @@
       "destination": "/tmp/gremlin-playground"
     },
     {
-      "type": "file",
-      "source": "scripts/webapp",
-      "destination": "/home/gremlin/webapp"
-    },
-    {
       "type": "shell",
       "execute_command": "sudo bash '{{.Path}}'",
       "script": "scripts/gremlin.sh"
+    },
+    {
+      "type": "file",
+      "source": "scripts/webapp.service",
+      "destination": "/tmp/webapp.service"
+    },
+    {
+      "type": "file",
+      "source": "scripts/webapp",
+      "destination": "/home/gremlin/webapp"
     },
     {
       "type": "shell",
