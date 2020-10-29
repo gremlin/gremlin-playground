@@ -6,6 +6,8 @@ Requires=redis.service
 [Service]
 Type=simple
 ExecStart=/bin/python3 /home/gremlin/webapp/app.py
+StandardOutput=file:/var/log/webapp.log
+StandardError=file:/var/log/webapp-error.log
 
 [Install]
 WantedBy=multi-user.target
