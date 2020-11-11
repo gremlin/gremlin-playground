@@ -45,8 +45,8 @@
     },
     {
       "type": "file",
-      "source": "scripts/gremlin-playground.sh",
-      "destination": "/tmp/gremlin-playground"
+      "source": "scripts/commands",
+      "destination": "/tmp/commands"
     },
     {
       "type": "shell",

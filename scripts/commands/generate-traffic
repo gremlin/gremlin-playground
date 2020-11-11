@@ -1,0 +1,38 @@
+#!/bin/bash
+
+GREETINGS=("Hello" "Salut" "Hola" "Ciao" "Guten Tag" "Olá" "Halløj" "Goedendag" "Cześć" "Tjena" "Hei" "Tere" "Goeie" "Labas")
+
+# Help messaging
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+  cat << EOM
+
+generate-traffic - Generates traffic and posts messages to the example app
+
+OPTIONS
+    -h, --help
+        Output this help message.
+
+    -s, --silent
+        Runs the traffic generator in the background and suppresses any output.
+
+EOM
+  exit 0
+fi
+
+
+# Run the traffic generator
+if [ "$1" == "--silent" ] || [ "$1" == "-s" ]; then
+  # If silent, run this in the background with no output.
+  while sleep 1; do
+    RANDOM=$$$(date +%s)
+    GREETING=${GREETINGS[$RANDOM % ${#GREETINGS[@]}]}
+    curl -s -X POST -F "entry=$GREETING" http://localhost > /dev/null
+  done &
+else
+  # Otherwise run in the foreground.
+  while sleep 1; do
+    RANDOM=$$$(date +%s)
+    GREETING=${GREETINGS[$RANDOM % ${#GREETINGS[@]}]}
+    curl -X POST -F "entry=$GREETING" http://localhost > /dev/null
+  done
+fi
