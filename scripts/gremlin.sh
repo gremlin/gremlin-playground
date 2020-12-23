@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install iproute-tc, Gremlin requires this for network attacks
+yum install -y iproute-tc
+
 # Add the Gremlin repo
 curl https://rpm.gremlin.com/gremlin.repo -o /etc/yum.repos.d/gremlin.repo
 # Install Gremlin client and daemon

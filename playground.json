@@ -51,6 +51,18 @@
     {
       "type": "shell",
       "execute_command": "sudo bash '{{.Path}}'",
+      "script": "scripts/upgrade.sh",
+      "expect_disconnect": true
+    },
+    {
+      "type": "shell",
+      "execute_command": "sudo bash '{{.Path}}'",
+      "script": "scripts/upgrade-cleanup.sh",
+      "pause_before": "30s"
+    },
+    {
+      "type": "shell",
+      "execute_command": "sudo bash '{{.Path}}'",
       "script": "scripts/gremlin.sh"
     },
     {
