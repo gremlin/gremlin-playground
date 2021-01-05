@@ -74,8 +74,16 @@ To build a new VM image:
 # If the file is valid, the command will not return any messages.
 packer validate playground.json
 
+# Remove any existing builds.
+make clean
+
 # Run the build process.
-packer build playground.json
+make build
+
+# Or if you're doing continued development, use the rebuild command.
+# This will perform a clean, build, and import the new build into
+# VirtualBox and run it.
+make rebuild
 ```
 
 When complete, packer will create a `gremlin_playground.tar.gz` file that is ready for distribution.
@@ -86,7 +94,7 @@ To create a new release:
 
 1. Update the `CHANGELOG.md` file. Note that the format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 1. Tag the main branch with your new version number. e.g. `git tag v0.7.0` and push the tag
-1. Run `packer build playground.json` to build a new release.
+1. Run `make clean` and `make build` to build a new release.
 1. Go to https://github.com/gremlin/gremlin-playground/releases/new and select your tag. The title of your release should be the version name (e.e. `v.0.7.0`) and the release description should be the notes from the `CHANGELOG.md` file.
 1. Attach the `gremlin_playground.tar.gz` file to your new release, then rename the file to add the release version number. e.g. `gremlin_playground-0.7.0.tar.gz`
 1. Double check your work!
