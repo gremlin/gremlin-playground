@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.3.0] - 2021-01-05
+### Added
+- Makefile added to automate and speed up development
+
+### Changed
+- Added `kernel-modules-extra` and `iproute-tc` to the build.
+
+### Removed
+
 ## [v0.2.0] - 2020-11-11
 ### Added
 - `generate-traffic` command added to simulate webapp traffic
@@ -26,5 +35,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 [Unreleased]: https://github.com/gremlin/gremlin-playground/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.1.0
+[0.3.0]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.3.0
 [0.2.0]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.2.0
+[0.1.0]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.1.0
