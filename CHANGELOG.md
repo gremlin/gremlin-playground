@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.4.0] - 2021-01-12
+### Added
+- Added sysstat package so attacks effects are more easily visible
+
+### Changed
+
+### Removed
+- Updated kickstart file to remove more unnecessary packages
+
 ## [v0.3.1] - 2021-01-05
 ### Added
 
@@ -43,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 [Unreleased]: https://github.com/gremlin/gremlin-playground/compare/v0.1.0...HEAD
+[0.4.0]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.4.0
 [0.3.1]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.3.1
 [0.3.0]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.3.0
 [0.2.0]: https://github.com/gremlin/gremlin-playground/releases/tag/v0.2.0
